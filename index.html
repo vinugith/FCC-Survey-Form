@@ -8,7 +8,7 @@
 <title>FCC Survey Form</title>
 </head>
 <body>
-<!-- Form Titel-->
+<!-- Form Title-->
 <h1 id="title">FormVille Forms</h1>
 <!-- Form Description-->
 <p id="description">Coding Geeks Survey Form</p>
@@ -17,17 +17,17 @@
 
 <!-- Details -->
 <div class="form-control">
-<label for="name" id="label-name">
+<label for="name" id="name-label">
     Name
 </label>
 <!-- Input Type Text -->
 <input type="text"
         id="name"
-        placeholder="Enter your name" />
+        placeholder="Enter your name" required />
 </div>
 
 <div class="form-control">
-<label for="email" id="label-email">
+<label for="email" id="email-label">
     Email
 </label>
 <!-- Input Type Email-->
@@ -39,13 +39,13 @@
 </div>
 
 <div class="form-control">
-    <label for="age" id="label-age">
+    <label for="age" id="number-label">
         Age
     </label>
 
     <!-- Input Type Text -->
     <input type="number"
-            id="age"
+            id="number"
             min="10"
             max="99"
             placeholder="Enter your age" />
@@ -67,26 +67,37 @@
 
 <div class="form-control">
     <label>
-        Would you recommed FormVille
+        Would you recommend FormVille
         to a friend?
     </label>
 
     <!-- Input Type Radio Button -->
-    <label for="recommed-1">
-        <input type="radio"
-                id="recommed-1"
-                name="recommed">Yes</input>
-    </label>
-    <label for="recommed-2">
-        <input type="radio"
-                id="recommed-2"
-                name="recommed">No</input>
-    </label>
-    <label for="recommed-3">
-        <input type="radio"
-                id="recommed-3"
-                name="recommed">Maybe</input>
-    </label>
+    <label>
+        <input
+          name="user-recommend"
+          value="definitely"
+          type="radio"
+          class="input-radio"
+          checked
+        />Definitely</label
+      >
+      <label>
+        <input
+          name="user-recommend"
+          value="maybe"
+          type="radio"
+          class="input-radio"
+        />Maybe</label
+      >
+
+      <label
+        ><input
+          name="user-recommend"
+          value="not-sure"
+          type="radio"
+          class="input-radio"
+        />Not sure</label
+      >
 </div>
 
 <div class="form-control">
@@ -138,9 +149,10 @@
 </div>
 
 <!-- Multi-line Text Input Control -->
-<button type="submit" value="submit">
+<button type="submit" id="submit" value="submit">
     Submit
 </button>
 </form>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
